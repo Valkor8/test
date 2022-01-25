@@ -202,7 +202,7 @@ input[type="radio"].visually-hidden {
   background-color: #0D89B0;
 }
 
-.footer {
+.main-block__footer {
   width: 1170px;
   height: 100px;
 
@@ -211,7 +211,7 @@ input[type="radio"].visually-hidden {
   background-color: #7FAFF7;
 }
 
-.popup {
+.main-block__popup {
   width: 400px;
   height: 400px;
 
@@ -227,7 +227,7 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
-.popup p {
+.main-block__popup p {
   width: 167px;
   height: 62px;
 
@@ -240,7 +240,7 @@ input[type="radio"].visually-hidden {
   margin-left: 117px;
 }
 
-.popup-close {
+.main-block__popup-close {
   display: block;
   width: 43px;
   height: 39px;
@@ -254,7 +254,7 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.popup-close::before {
+.main-block__popup-close::before {
   content: "X";
   width: 13px;
   height: 23px;
@@ -269,12 +269,11 @@ input[type="radio"].visually-hidden {
   top: 8px;
 }
 
-.main-block__header .checkbox-open input[type="checkbox"]:checked + .popup {
+.main-block__header input[type="checkbox"]:checked + .main-block__popup {
   display: block;
 }
 
-.main-block__header .checkbox-open input[type="checkbox"]:checked + .popup + span {
+.main-block__header input[type="checkbox"]:checked + div + .main-block__checkbox-open span {
   /* Решил убрать кнопку при открытии popup */
   display: none;
 }
-

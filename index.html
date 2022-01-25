@@ -9,15 +9,13 @@
   <main class="main">
     <div class="main-block">
       <div class="main-block__header">
-        <label class="checkbox-open">
-          <input type="checkbox" class=" visually-hidden">
-          <div class="popup">
-            <input type="checkbox" class="visually-hidden">
-            <span class="popup-close"></span>
-            <p>Pop-up</p>
-          </div>
-          <span class="main-block__button">Open pop-up button</span>
-        </label>
+        <input id="checkbox-open" type="checkbox" class="visually-hidden">
+        <div class="main-block__popup">
+          <label for="checkbox-open" class="main-block__checkbox-close"><span class="main-block__popup-close"></span></label>
+          <p>Pop-up</p>
+        </div>
+        <label for="checkbox-open" class="main-block__checkbox-open"><span class="main-block__button">Open pop-up button</span></label>
+          
 
       </div>
       <div class="main-block__container">
@@ -34,7 +32,7 @@
         <div></div>
       </div>
 
-      <div class="footer"></div>
+      <div class="main-block__footer"></div>
     </div>
   </main>
 
