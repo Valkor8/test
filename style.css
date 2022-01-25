@@ -1,0 +1,280 @@
+:root{
+  --width-blue-container: 1170px
+}
+
+*,
+.html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.main {
+  width: 1920px;
+  height: 1000px;
+}
+
+.main-block {
+  width: 1200px;
+  height: 1000px;
+  margin: 0 auto;
+
+  background-color: #C0DBD9;
+  padding: 15px;
+  padding-top: 0;
+}
+
+.main-block__header {
+  width: 1170px;
+  height: 100px;
+
+  background-color: #7FAFF7;
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+}
+
+.main-block__button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #FFFFFF;
+  background-color: #A5C7F9;
+
+  border-radius: 5px;
+
+  width: 206px;
+  height: 39px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+
+  cursor: pointer;
+}
+
+.main-block__button:hover {
+  background-color: #a2c1ee;
+}
+
+.main-block__button:active {
+  background-color: #91add6;
+}
+
+.main-block__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  background-color: #B3F95A;
+  margin-bottom: 15px;
+}
+
+.block1::before,
+.block2::before,
+.block2::before,
+.block3::before,
+.block4::before,
+.block5::before {
+  width: 30px;
+  height: 62px;
+  font-size: 53px;
+  line-height: 62px;
+
+  text-align: center;
+  color: #FFFFFF;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -31px;
+  margin-left: -15px;
+}
+
+.block1 {
+  width: 390px;
+  height: 198px;
+
+  background-color: #8AD191;
+  position: relative;
+}
+
+.block1::before {
+  content: "1";
+}
+
+.block2 {
+  width: 590px;
+  height: 198px;
+
+  background-color: #8AD191;
+  position: relative;
+}
+
+.block2::before {
+  content: "2";
+}
+
+.block3 {
+  width: 160px;
+  height: 198px;
+
+  background-color: #8AD191;
+  position: relative;
+}
+
+.block3::before {
+  content: "3";
+}
+
+.block4 {
+  width: 995px;
+  height: 198px;
+
+  background-color: #8AD191;
+  margin-top: 15px;
+
+  position: relative;
+}
+
+.block4::before {
+  content: "4";
+}
+
+.block5 {
+  width: 160px;
+  height: 198px;
+  margin-top: 15px;
+
+  background-color: #8AD191;
+
+  position: relative;
+}
+
+.block5::before {
+  content: "5";
+}
+
+.main-block__blue {
+  width: var(--width-blue-container);
+  max-height: 259px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 30px;
+
+  background-color: #88B5BF;
+}
+
+.main-block__blue div {
+  width: 21.8%;
+  height: calc(0.17 * var(--width-blue-container));
+
+  background-color: #0D89B0;
+}
+
+.footer {
+  width: 1170px;
+  height: 100px;
+
+  margin-top: 100px;
+
+  background-color: #7FAFF7;
+}
+
+.popup {
+  width: 400px;
+  height: 400px;
+
+  background-color: #FFFFFF;
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+  z-index: 100;
+
+  display: none;
+}
+
+.popup p {
+  width: 167px;
+  height: 62px;
+
+  font-size: 53px;
+  line-height: 62px;
+
+  color: #000000;
+
+  margin-top: 115px;
+  margin-left: 117px;
+}
+
+.popup-close {
+  display: block;
+  width: 43px;
+  height: 39px;
+  background-color: #7FAFF6;
+  border-radius: 5px;
+
+  position: relative;
+  margin-top: 15px;
+  margin-left: 342px;
+
+  cursor: pointer;
+}
+
+.popup-close::before {
+  content: "X";
+  width: 13px;
+  height: 23px;
+
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 23px;
+
+  position: absolute;
+
+  left: 15px;
+  top: 8px;
+}
+
+.main-block__header .checkbox-open input[type="checkbox"]:checked + .popup {
+  display: block;
+}
+
+.main-block__header .checkbox-open input[type="checkbox"]:checked + .popup + span {
+  /* Решил убрать кнопку при открытии popup */
+  display: none;
+}
+
